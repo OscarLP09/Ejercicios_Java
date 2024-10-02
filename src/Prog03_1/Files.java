@@ -6,9 +6,9 @@ import java.util.Scanner;
 public class Files {
     public static void main(String[] args) {
 
-    // Crear una File
+        // Crear una File
 
-        /*try {
+        try {
             File myObj = new File("filename.txt");
             if (myObj.exists()) {
                 System.out.println("File created: " + myObj.getName());
@@ -20,11 +20,11 @@ public class Files {
             e.printStackTrace();
             throw new RuntimeException(e);
         }
-        */
+
 
         // Escribir en una File
 
-        /*try{
+        try {
             FileWriter myWriter = new FileWriter("filename.txt");
             myWriter.write("\n Files in Java might be tricky, but it is fun enough! \n");
 
@@ -37,11 +37,11 @@ public class Files {
         } catch (IOException e) {
             System.out.println("An error occured");
             e.printStackTrace();
-        }*/
+        }
 
         // Leer una File
 
-        /*try{
+        try {
             File myObj = new File("filename.txt");
             Scanner myReader = new Scanner(myObj);
             while (myReader.hasNextLine()) {
@@ -53,11 +53,11 @@ public class Files {
         } catch (FileNotFoundException e) {
             System.out.println("An error occurred.");
             e.printStackTrace();
-        }*/
+        }
 
         // Get File Information
 
-        /*File myObj = new File("filename.txt");
+        File myObj = new File("filename.txt");
         if (myObj.exists()) {
             System.out.println("File Name: " + myObj.getName());
             System.out.println("Absolute Path: " + myObj.getAbsolutePath());
@@ -66,16 +66,18 @@ public class Files {
             System.out.println("File size in bytes: " + myObj.length());
         } else {
             System.out.println("File does not exist!");
-        }*/
 
-        // Eliminar un archivo
-        /*
-        File myObj = new File("filename.txt");
-        if (myObj.delete()) {
-            System.out.println("Deleted file");
-        } else {
-            System.out.println("Failed to delete file");
-        }*/
 
+            // Eliminar un archivo
+
+            myObj.delete();
+
+            if(myObj.exists()){
+                System.out.println("No se ha eliminado el archivo");
+            } else {
+                System.out.println("El archivo no existe");
+            }
+
+        }
     }
 }
