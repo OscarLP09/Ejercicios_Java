@@ -1,17 +1,14 @@
 package Prog03_1;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 import java.util.Scanner;
 
-/*public class Files {
+public class Files {
     public static void main(String[] args) {
 
     // Crear una File
 
-        try {
+        /*try {
             File myObj = new File("filename.txt");
             if (myObj.exists()) {
                 System.out.println("File created: " + myObj.getName());
@@ -23,9 +20,7 @@ import java.util.Scanner;
             e.printStackTrace();
             throw new RuntimeException(e);
         }
-*/
-public class Files {
-    public static void main(String[] args) {
+        */
 
         // Escribir en una File
 
@@ -81,5 +76,6 @@ public class Files {
         } else {
             System.out.println("Failed to delete file");
         }*/
+
     }
 }
