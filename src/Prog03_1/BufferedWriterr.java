@@ -5,7 +5,7 @@ import java.io.*;
 public class BufferedWriterr {
     public static void main(String[] args) {
 
-        /*try{
+        try{
             File txt = new File("archivo.txt");
             if(!txt.exists()){
                 System.out.println("Archivo creado");
@@ -15,7 +15,7 @@ public class BufferedWriterr {
         } catch (Exception e){
             System.out.println("Error al crear el archivo");
             e.printStackTrace();
-        }*/
+        }
 
         try (BufferedWriter bfw = new BufferedWriter(new FileWriter("archivo.txt"))) {
             bfw.write("Hola, este es un ejemplo de BufferedWriter.");
